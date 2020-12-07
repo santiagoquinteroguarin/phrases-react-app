@@ -29,8 +29,15 @@ function App() {
 
   // ?3.
   const queryAPI = () => {
-    
+    const API = fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+    const data = API.then(response => response.json());
+    data.then(response => console.log(response))
   }
+
+  // const queryAPI = async () => {
+  //   const API = await fetch('https://breaking-bad-quotes.herokuapp.com/v1/quotes');
+  //   const data = await API.json();
+  // }
 
   return (
     <Container>
